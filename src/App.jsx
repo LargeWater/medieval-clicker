@@ -1,8 +1,11 @@
+import '@sumup/design-tokens/dark.css';
+import '@sumup/circuit-ui/styles.css';
 import React, { useState, useEffect } from 'react';
 import ResourceClicker from './Components/ResourceClicker';
-import ResourceDisplay from './Components/ResourceDisplay';
+// import ResourceDisplay from './Components/ResourceDisplay';
 import Buildings from './Components/Buildings';
 import './App.css';
+import { Display } from './Components/Display';
 
 const App = () => {
   const [resources, setResources] = useState({
@@ -143,7 +146,8 @@ const App = () => {
         {upgrades.foodUnlocked && <ResourceClicker resource="food" onClick={() => handleResourceClick('food')} />}
         {upgrades.woolUnlocked && <ResourceClicker resource="wool" onClick={() => handleResourceClick('wool')} />}
       </div>
-      <ResourceDisplay resources={resources} />
+      {/* <ResourceDisplay resources={resources} /> */}
+      <Display resources={resources} />
       <Buildings resources={resources} upgrades={upgrades} buildings={buildings} onBuildingPurchase={handleBuildingPurchase} costs={costs} />
     </div>
   );

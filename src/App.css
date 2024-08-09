@@ -5,12 +5,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #c6c7b2;
+  background-color: #EFF6E0;
 }
 
 .game-container {
   text-align: center;
-  background: #4e6e62;
+  font-size: 20px;
+  background: #44633F;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
